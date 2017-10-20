@@ -1,11 +1,11 @@
 // REST params
 const sum = (...nbs) => nbs.reduce((acc, nb) => acc + nb);
-console.log(sum(1, 2));
+console.log(sum(1, 2, 3, 4, 5)); // 15
 
 const nbs = [1, 2, 3];
 
 nbs.forEach((...args) => {
-  console.log(args)
+  console.log(args);
 });
 
 // SPREAD operator array (ES6)
