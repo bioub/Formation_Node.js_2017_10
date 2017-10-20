@@ -15,7 +15,7 @@ server.on('connection', (socket) => {
 server.on('error', (err) => {
   console.log('Error : ', err.message);
 });
-server.on('listening', (...args) => {
+server.on('listening', () => {
   console.log('Server started');
 });
 

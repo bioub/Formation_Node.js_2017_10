@@ -5,7 +5,7 @@ const app = express();
 
 app.all('/', (req, res) => {
   res.setHeader('Content-type', 'text/plain');
-  res.send('Home');
+  res.send('Home !');
 });
 
 app.get('/presentation.html', (req, res) => {
