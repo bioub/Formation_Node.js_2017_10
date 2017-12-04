@@ -50,6 +50,10 @@ console.log(json);
 const coordsFromJson = JSON.parse(json);
 console.log(coordsFromJson.x); // 10
 
+// Factory
+const getCoords = (x, y) => ({x, y});
+
+
 // Fonction constructeur
 const Contact = function(prenom) {
   this._prenom = prenom;
@@ -65,4 +69,4 @@ console.log(romain.hello());
 const eric = new Contact('Eric');
 console.log(eric.hello());
 
-console.log(romain.hello === eric.hello);
+console.log(romain.hello === eric.hello); // true (false si factory)

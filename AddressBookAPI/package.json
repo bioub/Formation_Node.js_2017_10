@@ -6,12 +6,19 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
-    "eslint": "^4.9.0"
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.9.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "sinon": "^4.1.2",
+    "sinon-mongoose": "^2.0.2"
   },
   "scripts": {
     "start": "node .",
     "start:dev": "nodemon .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "mocha --recursive"
   }
 }

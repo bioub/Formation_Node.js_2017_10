@@ -1,5 +1,5 @@
 
-setTimeout(function() {
+setTimeout(function timeout() {
   console.log(arguments);
 }, 1000);
 
@@ -16,3 +16,16 @@ nbs.forEachAsync(function(nb) {
 });
 
 console.log('end');
+
+// call stack
+// ^
+// |
+// |
+// |
+// |
+// |          idle
+// |sT-fEA-cl ... timeout
+// +-------------------------------------> temps
+// 0              1
+//
+// event queue : timeout

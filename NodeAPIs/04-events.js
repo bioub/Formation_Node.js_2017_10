@@ -6,8 +6,8 @@ em.on('user.created', (user) => {
   console.log('on', user.prenom);
 });
 
-em.once('user.created', (user) => {
-  console.log('once', user.prenom);
+em.once('user.created', ({prenom}) => {
+  console.log('once', prenom);
 });
 
 

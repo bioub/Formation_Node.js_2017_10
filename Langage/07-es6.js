@@ -14,7 +14,7 @@ console.log(sum(...nbs)); // ES6
 const autreNbs = [...nbs, 4, 5, 6];
 const clone = [...nbs];
 
-// SPREAD operator object (ES next)
+// SPREAD operator object (ESNext)
 const coords2D = {
   x: 10,
   y: 20,
