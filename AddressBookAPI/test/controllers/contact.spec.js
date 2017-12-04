@@ -2,7 +2,6 @@
 
 const assert = require('assert');
 const sinon = require('sinon');
-require('sinon-mongoose');
 const Contact = require('../../models/contact');
 const ctrl = require('../../controllers/contact');
 
@@ -13,13 +12,13 @@ const ctrl = require('../../controllers/contact');
 
 describe('Contact Controller', () => {
   describe('method list', () => {
-    let ContactMock;
+    let findStub;
     beforeEach(() => {
-      ContactMock = sinon.mock(Contact);
+      findStub = sinon.stub(Contact, 'find');
     });
 
     afterEach(function () {
-      ContactMock.restore(); // Unwraps the spy
+      findStub.restore();
     });
 
     it('should call res.json', async () => {
@@ -30,8 +29,7 @@ describe('Contact Controller', () => {
       const next = sinon.spy();
       const fakeData = [{_id: '123', prenom: 'John', nom: 'Doe'}];
 
-      ContactMock.expects('find')
-        .resolves(fakeData);
+      findStub.resolves(fakeData);
 
       await ctrl.list(req, res, next);
 

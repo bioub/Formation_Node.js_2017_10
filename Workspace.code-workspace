@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "Langage"
+		},
+		{
+			"path": "CallbackHell"
+		},
+		{
+			"path": "NodeAPIs"
+		},
+		{
+			"path": "AddressBookAPI"
+		},
+		{
+			"path": "ExpressRestFromYo"
+		},
+		{
+			"path": "HelloExpressGenerator"
+		},
+		{
+			"path": "BuildWebpack"
+		}
+	],
+	"settings": {}
+}
