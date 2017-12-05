@@ -1,4 +1,6 @@
 import config from '../config/config.json5';
+import { getRandomIntInclusive } from './random';
+import format from 'date-fns/format';
 
 // 1 - Installer et configurer json5-loader (doc sur le site webpack)
 // 2 - Installer et configurer clean-webpack-plugin (rechercher sur google)
@@ -10,11 +12,11 @@ class Horloge {
    */
   constructor(element) {
     this._element = element;
-    console.log(config.format); // HH:mm:ss
+    console.log(getRandomIntInclusive(0, 100));
   }
   _render() {
     const now = new Date();
-    this._element.innerHTML = now.toLocaleTimeString();
+    this._element.innerHTML = format(now, config.format);
   }
   start() {
     this._render();
